@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TRANG CHỦ</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"><script defer="defer" src="main.js"></script></head><body><header id="header"><div class="container-sm"><nav class="navbar navbar-expand-lg"><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarNavDropdown"><ul id="primary-menu" class="navbar-nav justify-content-between align-items-center w-100"><li class="nav-item active"><a class="nav-link" href="#">TRANG CHỦ</a></li><li class="nav-item"><a class="nav-link" href="#">HIGHLIGHT</a></li><li class="nav-item"><a class="nav-link" href="#">LỊCH THI ĐẤU</a></li><li class="nav-item nav-item-logo"><a class="nav-link" href="#"><img src="images/logo.png" alt=""></a></li><li class="nav-item"><a class="nav-link" href="#">TIN TỨC</a></li><li class="nav-item"><a class="nav-link" href="#">KẾT QUẢ</a></li><li class="nav-item"><a class="nav-link" href="#">BẢNG XẾP HẠNG</a></li></ul></div></nav></div><section id="sec-live"><div class="container-md"><div class="sec-live-inner d-inline-block"><div class="marquee"><p><img src="images/icon-live.png" alt=""> <span class="text-red">Thông báo:</span> Chuyển tên miền đến <a href="" class="text-gradient-1">Xoilaczo.tv</a></p><p><img src="images/icon-live.png" alt=""> Cộng động Facebook: <a href="" class="text-gradient-1">Cộng đồng Xôi Lạc & Về bờ</a></p><p><img src="images/icon-live.png" alt=""> Telegram hỗ trợ: <a href="" class="text-gradient-1">https://t.me/congdongxoilac</a></p></div><div class="sec-live-video"><div class="video-player d-flex justify-content-between"><div class="video-container position-relative"><img src="images/live-big.jpg" class="video-container-img w-100" alt=""><div class="video-container-box text-center"><a href="#" id="btn-play" class="d-block"><img src="images/icon-play.png" class="icon-play" alt=""></a><a href="#" class="btn-gradient d-block"><span><img src="images/icon-soccer.png" alt="">Vào phòng live</span></a></div></div><div class="video-list"><ul><li class="active" data-video-id="VIDEO_ID_1"><a href="#"><img src="images/icon-video.png" class="icon-video" alt=""><img src="images/live-3.png" alt=""></a></li><li data-video-id="VIDEO_ID_2"><a href="#"><img src="images/live-4.png" alt=""></a></li><li data-video-id="VIDEO_ID_3"><a href="#"><img src="images/live-5.png" alt=""></a></li><li data-video-id="VIDEO_ID_3"><a href="#"><img src="images/live-5.png" alt=""></a></li><li data-video-id="VIDEO_ID_3"><a href="#"><img src="images/live-5.png" alt=""></a></li><li data-video-id="VIDEO_ID_3"><a href="#"><img src="images/live-5.png" alt=""></a></li><li data-video-id="VIDEO_ID_3"><a href="#"><img src="images/live-5.png" alt=""></a></li></ul></div></div></div></div></div></section></header><main><div class="container-lg"><section id="blv"><div class="blv-title text-center"><div class="box-radial"><h3 class="tit-gradient">top <span>bình luận viên</span></h3></div></div><div class="blv-content"><div class="slider-blv"><div class="item"><a href="#"><img src="imagese/live-4.png" alt=""></a></div><div class="item"><a href="#"><img src="images/live-4.png" alt=""></a></div></div></div></section></div></main><footer></footer><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script></body></html><script>$(function() { 
+    $('.slider-blv').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
+                      
+});</script>

@@ -1,0 +1,15 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Facebook" clip-path="url(#clip0_227_435)">
+<path id="Vector" d="M22.796 17.4616L23.6009 12.1615H18.5657V8.72358C18.5657 7.27321 19.2678 5.85866 21.523 5.85866H23.8136V1.3464C23.8136 1.3464 21.7358 0.988281 19.7501 0.988281C15.6014 0.988281 12.8923 3.52732 12.8923 8.12195V12.1615H8.28271V17.4616H12.8923V30.275C13.8178 30.4218 14.7646 30.497 15.729 30.497C16.6935 30.497 17.6403 30.4218 18.5657 30.275V17.4616H22.796Z" fill="url(#paint0_linear_227_435)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_227_435" x1="6.85641" y1="-3.45824" x2="43.0271" y2="21.2686" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00E0FF"/>
+<stop offset="0.597916" stop-color="#38E99F"/>
+<stop offset="1" stop-color="#0FB1E4"/>
+</linearGradient>
+<clipPath id="clip0_227_435">
+<rect width="31.0618" height="31.0618" fill="white" transform="translate(0.51709 0.211914)"/>
+</clipPath>
+</defs>
+</svg>

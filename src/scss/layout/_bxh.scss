@@ -1,0 +1,133 @@
+main{
+    .layout-bxh{
+        .bxh{
+            .tab-header{
+                padding: 0 5px;
+                background: $primary3;
+                border-radius: 3px;
+                .tab-list{
+                    a{
+                        display: inline-block;
+                        &.active{
+                            border-bottom: 1px solid $primary6;
+                            button{
+                                color: $primary6;
+                            }
+                        }
+                        padding: 10px;
+                        button{
+                            background: transparent;
+                            border: none;
+                            color: $white;
+                            font-family: $font_family_2;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            &:hover{
+                                color: $primary6;
+                            }
+                        }
+                    }
+                }
+            }
+            .tab-panel{
+                margin-top: 20px;
+                &-tournament{
+                    font-family: $font_family_2;
+                    font-size: 13px;
+                    text-align: center;
+                    @media (max-width:768px){
+                        &.tab-short{
+                            .tab-panel-tournament-header,
+                            .tab-panel-tournament-row{
+                                grid-template-columns: 50px 1fr 40px 40px 40px 40px;
+                            }
+                            .table-cell:nth-child(7),
+                            .table-cell:nth-child(8),
+                            .table-cell:nth-child(9),
+                            .table-cell:nth-child(10),
+                            .table-cell:nth-child(11),
+                            .table-row:nth-child(7),
+                            .table-row:nth-child(8),
+                            .table-row:nth-child(9),
+                            .table-row:nth-child(10),
+                            .table-row:nth-child(11){
+                                display: none;
+                            }
+                            
+                        }
+                    }
+                    &-header{
+                        user-select: none;
+                        justify-content: space-between;
+                        background: $primary3;
+                        padding: 10px 0;
+                        display: grid;
+                        grid-template-columns: 50px 1fr 40px 40px 40px 40px 80px 40px 40px 140px 40px;
+                        align-items: center;
+                        color: #717983;
+                        &-team{
+                            text-align: left;
+                        }
+                    }
+                    &-body{
+                        .tab-panel-tournament-row{
+                            display: grid;
+                            grid-template-columns: 50px 1fr 40px 40px 40px 40px 80px 40px 40px 140px 40px;
+                            padding: 10px 0;
+                            border-bottom: 1px solid #292B2E;
+                            text-transform: uppercase;
+                            &.row-alert{
+                                display: inline-block ;
+                                width: 100%;
+                                padding: 0px 20px;
+                                text-align: left;
+                                background-color: $primary3;
+                                color: #C72A1D;
+                                font-size: 14px;
+                                text-transform: capitalize;
+                            }
+                            &-team{
+                                text-align: left;
+                                &-block{
+                                    position: relative;
+                                    .team-th {
+                                        @media (max-width:860px){
+                                            display: none;
+                                        }
+                                        position: absolute;
+                                        left: 50%;
+                                        transform: translate(-50%,-50%);
+                                        top: 50%;
+                                    }
+                                    img{
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                            &-win{
+                                color:#52AF2F;
+                            }
+                            &-draw{
+                                color:#FFBA5A;
+                            }
+                            &-lost{
+                                color:#E74C5B;
+                            }
+                            &-performance{
+
+                            }
+                        }
+                    }
+                    &-footer{
+                        margin: 20px 0 0 20px;
+                        &-list{
+                            text-align: left;
+                            font-size: 12px;
+                            color: #999;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

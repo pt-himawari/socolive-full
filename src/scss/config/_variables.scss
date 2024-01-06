@@ -1,0 +1,344 @@
+/*******************************************
+  VARIABLES
+*******************************************/
+
+/************************************************************
+FILE PATH
+
+can be used by scss files when referencing images that are
+part of the theme build and not directly editable through
+WP admin interface
+************************************************************/
+
+$img_path: "../../dist/images/";
+
+/************************************************************
+CONTAINER SETTINGS
+
+defines the maximum width
+************************************************************/
+
+// maximum width for main column container if 'standard size max width' selectd in most blocks
+$container_sm: 1030px;
+$container_md: 1390px;
+$container_lg: 1560px;
+$container_ft: 1670px;
+$max_content_width: 1088px;
+$max_content_width_tablet: 720px;
+$max_content_width_mobile: 318px;
+// width of column container prior to hitting max width (if associated)
+// $width_column : 90%;
+
+/************************************************************
+SPACING
+
+vertical spacing between content blocks
+************************************************************/
+
+$vertical_padding_mobile: 50px 0;
+$vertical_padding_tablet: 60px 0;
+$vertical_padding_desktop: 70px 0;
+$vertical_padding_desktop-wide: 75px 0;
+
+/************************************************************
+BREAKPOINTS
+
+standard breakpoints used with the shortcut 'mq' mixin
+see _mixins.scss for mixin and use example
+************************************************************/
+
+$breakpoints: (
+  "phone-wide": 480px,
+  //"phablet"     :   560px,
+  "tablet-small": 768px,
+  "tablet": 992px,
+  "desktop": 1024px,
+  "desktop-wide": 1300px,
+);
+
+/************************************************************
+COLORS
+
+primary use colors in theme, however content blocks should
+rely more on the sites primary and secondary theme color and
+allow manual color selection in most cases
+
+tool to find real color names for variables
+http://chir.ag/projects/name-that-color
+************************************************************/
+
+// Lets be obvious
+$white: #ffffff;
+$black: #000000;
+$primary: #1a1d23;
+$primary2: #090f17;
+$primary3: #2a3038;
+$primary4: #0add84;
+$primary5: #23282d;
+$primary6: #47a147;
+$secondary1: #009b3a;
+$secondary2: #f00;
+$secondary3: #00c2ff;
+$secondary4: #f90;
+$secondary5: #ff4329;
+$secondary6: #a660ff;
+$secondary7: #00b272;
+$secondary8: #ff3fbe;
+$primary-hex: rgb(27, 29, 34);
+$shadow-color: #82d7f7;
+$gradient-start: #4ea648;
+$gradient-middle: #28e624;
+$gradient-end: #0fe4d7;
+%clip-path-hex {
+  -webkit-clip-path: polygon(
+    0% 50%,
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%
+  );
+  -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+}
+
+$gradient_1: linear-gradient(180deg, #ffc700 0%, #bdff00 100%);
+$gradient_2: linear-gradient(
+  180deg,
+  rgba(0, 0, 0, 0.8) 0%,
+  rgba(15, 38, 48, 0.8) 100%
+);
+$gradient_3: linear-gradient(
+  142deg,
+  #00ff85 -12.51%,
+  #9feeff 96.5%,
+  #19ffc8 136.14%
+);
+$gradient_3_1: linear-gradient(
+  142deg,
+  rgba(22, 29, 102, 0.83) 14.85%,
+  #5cf5b5 55%,
+  rgba(22, 29, 102, 0.83) 92.64%
+);
+$gradient_4: linear-gradient(
+  276deg,
+  #ffc46b 2.33%,
+  #ffc200 47.12%,
+  #ff7a00 94.32%
+);
+$gradient_5: linear-gradient(
+  142deg,
+  #00e0ff -12.51%,
+  #38e99f 76.37%,
+  #0fb1e4 136.14%
+);
+$gradient_6: linear-gradient(90deg, #1a1d23 0%, #141417 100%);
+$gradient_7: linear-gradient(
+  139deg,
+  rgba(255, 255, 255, 0.04) -6.39%,
+  rgba(143, 143, 143, 0.02) 112.17%
+);
+$gradient_8: linear-gradient(
+  270deg,
+  rgba(255, 255, 255, 0) 0%,
+  rgba(22, 29, 102, 0) 14.85%,
+  #28b69d 55%,
+  rgba(22, 29, 102, 0) 92.64%,
+  rgba(255, 255, 255, 0) 100%
+);
+$gradient_9: linear-gradient(
+  270deg,
+  rgba(255, 255, 255, 0) 0%,
+  #164966 14.85%,
+  #28b67a 55%,
+  rgba(22, 29, 102, 0.83) 92.64%,
+  rgba(255, 255, 255, 0) 100%
+);
+$gradient_rd_1: radial-gradient(
+  114.41% 19.83% at 26.67% 50.02%,
+  #132b47 0%,
+  #0d2139 51.3%,
+  #061428 100%
+);
+
+$gradient_10: linear-gradient(
+  270deg,
+  rgba(255, 255, 255, 0) -31.61%,
+  rgb(6, 12, 21) -8.47%,
+  #1885a7 50%,
+  rgba(1 2 16) 112.76%,
+  rgba(255, 255, 255, 0) 124.24%
+);
+$gradient_11: linear-gradient(
+  270deg,
+  rgba(255, 255, 255, 0) 0%,
+  #164966 14.85%,
+  #28b67a 55%,
+  rgba(22, 29, 102, 0.83) 92.64%,
+  rgba(255, 255, 255, 0) 100%
+);
+$border_bottom: 1px solid rgba(255, 255, 255, 0.18);
+$border_footer: 1px solid $gradient_11;
+// TODO: remove unused color
+// Client specific colors
+$link_color: #686447; // link
+$text_color: $primary2; // content
+$back_color: $primary3; // background
+
+// Misc
+$error_red: #be3132;
+$primary_text: $primary2;
+
+$button_primary: $link_color;
+$button_secondary: $white;
+// light v1
+// $button_text_light_color_v1: #FEFEFE;
+// $button_text_light_hover_color_v1: #FEFEFE;
+// $button_text_light_click_color_v1: $primary;
+// // light v2
+// $button_text_light_color_v2: $primary2;
+// $button_text_light_hover_color_v2: $primary3;
+// $button_text_light_click_color_v2: $primary3;
+// // drak
+// $button_text_dark_color:$primary;
+// $button_text_dark_hover_color:$primary;
+// $button_text_dark_click_color: $primary4;
+
+/************************************************************
+TYPOGRAPHY
+
+General typography settings and all font size settings are 
+done here, fine tuning can be doen in _typography.scss
+************************************************************/
+$fs_base: 15px;
+
+// font weight variables, useful when referencing web font weights
+$weight_light: 300;
+$weight_primary: 400;
+$weight_light_bold: 500;
+$weight_mid: 600;
+$weight_bold: 700;
+$weight_black: 800;
+
+// font units 'px', 'rem', 'em'
+$font_units: px;
+
+/*
+Note about font sized variables:
+fonts defined by minimum and maximum variables, fonts are adjusted dynamically
+at various breakpoints between these the min and max value.  
+
+Min is used at PHONE size and max is used at DESKTOP-WIDE breakpoint
+
+For greater control of font sizes at various in between breakpoints adjust the 
+$font_adjust variable just a little lower below.  
+ */
+
+// H1 min and max font size
+$h1_min: 32;
+$h1_max: 48;
+
+// H2 min and max font size
+$h2_min: 20;
+$h2_max: 32;
+
+// H3 min and max font size
+$h3_min: 16;
+$h3_max: 22;
+
+// H4 min and max font size
+$h4_min: 14;
+$h4_max: 18;
+
+// p min and max font size
+$p_min: 12;
+$p_max: 16;
+
+$link_min: 12;
+$link_max: 16;
+// H3 card min and max font size
+
+// $card_min: 24;
+// $card_max: 26;
+
+// small text description min and max font size
+
+// $sm_desc_min: 14;
+// $sm_desc_max: 16;
+
+// text description min and max font size
+
+// $desc_min: 16;
+// $desc_max: 18;
+
+// names go along with items in $breakpoints variable above
+// used to determin font size at various stage points between phone and wide
+// equation used is (MAX_SIZE - MIN_SIZE) * font_adjust value for given screen size
+$font_adjust: (
+  "phone-wide": 0.3,
+  //"phablet"     :   0.3,
+  //"tablet-small"    :   0.4,
+  "tablet": 0.5,
+  //"tablet-wide" :   0.6,
+  "desktop": 1,
+  "desktop-wide": 1,
+);
+
+/************************************************************
+HEADER SETTINGS
+
+Variable use, their names, values, and count can be modified
+as needed for client specific modifications. 
+************************************************************/
+
+$header_height_mobile: 75px;
+$header_height_tablet: 75px;
+$header_height_desktop: 100px;
+
+$header_hamburger_bar_width: 30px;
+
+$header_font_primary_mobile: 15px;
+$header_font_primary_desktop: 16px;
+$header_font_primary_desktop-wide: 18px;
+$header_font_sub: 14px;
+
+$header_primary_spacing_desktop: 12px;
+$header_primary_spacing_desktop-wide: 20px;
+
+/************************************************************
+FOOTER SETTINGS
+
+Variable use, their names, values, and count can be modified
+as needed for client specific modifications. 
+************************************************************/
+
+$footer_font_txt: 12px;
+$footer_font_txt_small: 10px;
+
+/************************************************************
+TRANSITIONS
+
+Some standard stransition and ease values
+************************************************************/
+
+$transition_short: 0.2s ease-in-out;
+$transition_long: 0.4s ease-in-out;
+$transition_verylong: 1s ease-in-out;
+
+/************************************************************
+FONTS
+
+************************************************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap");
+
+$font_menu: "Red Rose", sans-serif;
+$font_family_2: "Oswald", sans-serif;
+$font_family_3: "Inter", sans-serif;
+$font_family_4: "Russo One", sans-serif;
+$font_family_5: "Montserrat", sans-serif;
+$font_base: "Raleway", sans-serif;

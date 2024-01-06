@@ -1,0 +1,151 @@
+.page {
+  #header {
+    nav {
+      border-bottom: $border_bottom;
+    }
+  }
+}
+
+main {
+  #ranked {
+    margin-bottom: 70px;
+    .ranked-header {
+      .filter-tags {
+        @media (max-width: 768px) {
+          flex-direction: column-reverse;
+        }
+        &-date {
+          @media (max-width: 768px) {
+            width: 100%;
+            justify-content: flex-start !important;
+          }
+          &-item {
+            margin-right: 10px;
+            font-size: 13px;
+            padding: 8px;
+            color: #afb4ba;
+            background-color: $primary3;
+            line-height: 1;
+            border-radius: 2px;
+            &:hover {
+              background: $gradient_3;
+              color: $black;
+            }
+            &.active {
+              background: $gradient_3;
+              color: $black;
+            }
+          }
+        }
+        &-search {
+          width: 360px;
+          border-radius: 4px;
+          border: 1px solid #2a3038;
+          @media (max-width: 768px) {
+            width: 100%;
+            margin-bottom: 15px;
+          }
+          nav {
+            padding: 0px 10px;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+            form {
+              background: $white;
+              input[type="search"] {
+                border: none;
+                padding: 5px;
+                font-size: 13px;
+                font-family: $font_family_2;
+                &:focus {
+                  box-shadow: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      .filter-tags-league {
+        margin: 15px 0;
+        background-color: $primary5;
+        padding: 15px;
+        flex-wrap: wrap;
+        gap: 0.94rem 2rem;
+        border-radius: 6px 6px 0 0;
+        -webkit-border-radius: 6px 6px 0 0;
+        -moz-border-radius: 6px 6px 0 0;
+        -ms-border-radius: 6px 6px 0 0;
+        -o-border-radius: 6px 6px 0 0;
+        a {
+          color: #717983;
+          font-size: 12px;
+          text-transform: capitalize;
+          &:hover {
+            color: $secondary1;
+          }
+        }
+      }
+    }
+    .ranked-panel {
+      &-matches {
+        li {
+          padding: 12px 15px;
+          border-bottom: 1px solid $primary5;
+          color: #afb4ba;
+          font-family: $font_family_2;
+          &.league-title {
+            background-color: $primary5;
+            font-weight: bold;
+            color: $white;
+            img {
+              margin-right: 10px;
+            }
+          }
+          .match-item-box {
+            &-time {
+              font-size: 13px;
+              @media (max-width: 1000px) {
+                width: 100%;
+              }
+            }
+            &-teams {
+              @media (max-width: 1000px) {
+                width: 100%;
+              }
+              flex: 1;
+              color: #f2f3f3;
+              font-size: 13px;
+              &-detail {
+                flex: 1;
+                .logo-team {
+                  width: 32px;
+                  height: 32px;
+                  object-fit: contain;
+                  display: block;
+                }
+              }
+              .team-name {
+                margin: 0px;
+              }
+              &-status {
+                padding: 7px 13px;
+                font-weight: bold;
+                color: $white;
+                background-color: #47a147;
+                border-radius: 2px;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                -ms-border-radius: 2px;
+                -o-border-radius: 2px;
+                display: inline-block;
+                margin: 0 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

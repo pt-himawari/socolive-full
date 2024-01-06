@@ -1,0 +1,331 @@
+.home {
+  #header {
+    nav {
+      border-bottom: $border_bottom;
+      background: $gradient_11;
+      height: 70px;
+      padding: 10px 45px;
+      @media (max-width: 991px) {
+        height: auto;
+        padding: 0;
+        background: transparent;
+      }
+      @media (min-width: 1200px) {
+        padding: 10px 90px;
+        // padding: 0;
+      }
+    }
+  }
+  main {
+    @media (min-width: 1024px) {
+      margin-top: 42px;
+      // padding: 0;
+    }
+    @media (max-width: 1024px) {
+      margin-top: 10px;
+      // padding: 0;
+    }
+  }
+  main,
+  footer {
+    padding: 0 60px;
+  }
+}
+.navbar-layout-mobile {
+  border-bottom: $border_bottom;
+  background: $gradient_10;
+
+  padding: 10px 15px;
+  position: relative;
+  display: none;
+  @media (max-width: 991px) {
+    display: block;
+    .navbar-toggler {
+      border: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}
+.menu-soccer {
+  li {
+    a {
+      font-family: $font_menu;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      color: $white;
+      line-height: 20px;
+    }
+    &.active {
+      a {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          background: url(#{$img_path}line-gradient-1.png) no-repeat center;
+          bottom: 7px;
+          left: 50%;
+          transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          width: 100%;
+          height: 2px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          background: url(#{$img_path}icon-soccer.png) no-repeat center;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+}
+#sec-live {
+  padding: 0 65px;
+  @media (max-width: 992px) {
+    margin-top: 5px;
+  }
+  @media (max-width: 991px) {
+    padding: 0;
+    // max-width: 100%;
+    // margin: 0 20px;
+  }
+  // margin: 0 5rem;
+  .sec-live-inner {
+    background: $gradient_2;
+    border-radius: 6px 6px 0px 0px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .sec-live-video {
+    // margin-top: 15px;
+    margin: 0px auto;
+    // margin-bottom: 15px;
+
+    @media (max-width: 1390px) {
+      // max-width: 100%;
+      // margin: 0px auto;
+      // margin-bottom: 15px;
+    }
+
+    @media (max-width: 1024px) {
+      margin: 0;
+      // max-width: 100%;
+      // margin: 0 20px;
+    }
+    .video-player {
+      justify-content: center !important;
+      // @media (max-width: 1390px) {
+      //   justify-content: center !important;
+      // }
+
+      @media (max-width: 1024px) {
+        flex-direction: column;
+      }
+      .video-container {
+        width: calc(100% - 246px);
+
+        @media (max-width: 1024px) {
+          width: 100%;
+        }
+
+        &::after {
+          content: "";
+          background: url(#{$img_path}bg-video.png) no-repeat center;
+          background-size: cover;
+
+          position: absolute;
+          top: 0px;
+          margin-right: -5px;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+        }
+
+        &-inner {
+          position: relative;
+          z-index: 3;
+          padding: 4px 4px 5px;
+
+          &-box {
+            a:hover {
+              opacity: 0.6;
+            }
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            #btn-play {
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+      .video-list {
+        max-width: 236px;
+        @media (max-width: 1390px) {
+          // max-width: 180px;
+        }
+        @media (max-width: 1024px) {
+          width: 100%;
+          overflow-x: auto;
+          max-width: 100%;
+          white-space: nowrap;
+        }
+        ul {
+          @keyframes slideUp {
+            from {
+              transform: translateY(0);
+            }
+            to {
+              transform: translateY(-100%);
+            }
+          }
+
+          animation: slideUp 0.3s ease-in-out;
+          overflow-y: scroll;
+          -webkit-overflow-scrolling: touch;
+          height: 620px;
+          @media (max-width: 1390px) {
+            // height: 400px;
+          }
+          @media (max-width: 1024px) {
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          &::-webkit-scrollbar {
+            width: 4px; // Độ rộng của thanh cuộn
+            @media (max-width: 1024px) {
+              width: 2px;
+            }
+          }
+
+          &::-webkit-scrollbar-track {
+            background: #d9d9d9; // Màu nền cho track (phần nền của thanh cuộn)
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: $gradient_3;
+            border-radius: 60px;
+            -webkit-border-radius: 60px;
+            -moz-border-radius: 60px;
+            -ms-border-radius: 60px;
+            -o-border-radius: 60px;
+          }
+          li + li {
+            margin-top: 10px;
+          }
+          li {
+            margin: 0px 4px 0px 10px;
+            .icon-video {
+              position: absolute;
+              right: 8px;
+              top: 8px;
+              z-index: 6;
+              width: auto;
+            }
+            // &.active {
+            //   position: relative;
+            //   z-index: 0;
+            // }
+            &.active {
+              z-index: 1000;
+              position: relative;
+
+              @media (max-width: 1024px) {
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  border-radius: 3px;
+                  border: 3px solid #00ff85;
+                  padding: 4px;
+                }
+              }
+              @media (min-width: 1025px) {
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  border-radius: 6px;
+                  padding: 4px;
+                  background: $gradient_3;
+                  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                    linear-gradient(#fff 0 0);
+                  -webkit-mask-composite: xor;
+                  -webkit-border-radius: 6px;
+                  -moz-border-radius: 6px;
+                  -ms-border-radius: 6px;
+                  -o-border-radius: 6px;
+                }
+                &::after {
+                  content: "";
+
+                  position: absolute;
+                  top: 45%;
+                  background: url(#{$img_path}icon-Polygon.png) no-repeat center;
+                  left: -10px;
+
+                  width: 15px;
+                  height: 15px;
+                }
+              }
+            }
+            a {
+              display: block;
+
+              border: 1px solid #bbb;
+              border-radius: 4px;
+              -webkit-border-radius: 4px;
+              -moz-border-radius: 4px;
+              -ms-border-radius: 4px;
+              -o-border-radius: 4px;
+              overflow: hidden;
+              img {
+                width: 100%;
+                @media (max-width: 1024px) {
+                  width: 150px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

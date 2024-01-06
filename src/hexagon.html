@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    body {
+      padding: 40px 40px;
+      background: rgb(27, 29, 34);
+      box-sizing: border-box;
+    }
+
+    .parent-wrap {
+      filter: drop-shadow(0px 0px 10px #82D7F7)
+    }
+
+    .parent-hex {
+      position: relative;
+      width: 135.389px;
+      height: 117.257px;
+      transform: rotate(-30deg);
+      -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+      -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    }
+
+    .hex-one {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0.3;
+      background-image: linear-gradient(142deg, #4EA648 -12.49%, #28E624 0.4%, #0FE4D7 88.51%);
+      -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+      -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    }
+
+    .bg-one {
+      position: absolute;
+      background-color: rgb(27, 29, 34);
+      top: 1px;
+      left: 1px;
+      width: 133.389px;
+      height: 115.257px;
+      -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+      -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    }
+
+    .hex-two {
+      top: 3.346px;
+      left: 3.882px;
+      width: 127.625px;
+      height: 110.565px;
+      position: absolute;
+      background-image: linear-gradient(142deg, #4EA648 -12.49%, #28E624 0.4%, #0FE4D7 88.51%);
+      -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+      -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    }
+
+    .bg-two {
+      position: absolute;
+      background-color: rgb(27, 29, 34);
+      top: 1px;
+      left: 1px;
+      width: 125.625px;
+      height: 108.565px;
+      -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+      -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    }
+
+    .hex-three {
+      width: 116.27px;
+      height: 100.73px;
+      position: absolute;
+      top: 8.057px;
+      left: 9.475px;
+      background-image: linear-gradient(142deg, #4EA648 -12.49%, #28E624 0.4%, #0FE4D7 88.51%);
+      -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+      -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+
+    }
+
+    .bg-three {
+      position: absolute;
+      background-color: rgb(27, 29, 34);
+      top: 3px;
+      left: 3px;
+      width: 110.27px;
+      height: 94.73px;
+      box-shadow: inset 0 4px 10px 0 #82D7F7,
+        inset 0 -4px 30px 0 #82D7F7;
+      filter: drop-shadow(0px 0px 15px #82D7F7);
+      transform: rotate(60deg);
+      z-index: 100;
+      -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+      -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+
+    }
+
+    .hex-three img {
+      /* position: absolute; */
+      width: 100%;
+      height: 100%;
+      transform: rotate(-30deg);
+      object-fit: cover;
+    }
+
+    .hexagon {
+      width: 100px;
+      /* Adjust the size as needed */
+      height: 55px;
+      /* Adjust the size as needed */
+      background-color: #6C63FF;
+      /* Change to your hexagon's color */
+      position: relative;
+      margin: 27.5px 0;
+    }
+
+    .hexagon:before,
+    .hexagon:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+    }
+
+    .hexagon:before {
+      bottom: 100%;
+      border-bottom: 27.5px solid #6C63FF;
+      /* Same color as hexagon background */
+    }
+
+    .hexagon:after {
+      top: 100%;
+      width: 0;
+      border-top: 27.5px solid #6C63FF;
+      /* Same color as hexagon background */
+    }
+
+    /* Shadow effect */
+    .hexagon {
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+      /* Adjust the shadow properties */
+    }
+
+
+
+    .col-rt-12 {
+      width: 400px;
+      height: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div class="col-rt-12"> -->
+  <div class="parent-wrap">
+    <div class="parent-hex">
+      <div class="hex-one">
+
+        <div class="bg-one "></div>
+      </div>
+
+
+      <div class="hex-two">
+        <div class="bg-two "></div>
+      </div>
+
+      <div class='parent-wrap'>
+        <div class="hex-three">
+          <div class="bg-three ">
+            <img src="../dist/images/hex.png">
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+
+
+  <div class="hexagon my-5"></div>
+  <div class='test '></div>
+  <!-- </div> -->
+</body>
+
+</html>

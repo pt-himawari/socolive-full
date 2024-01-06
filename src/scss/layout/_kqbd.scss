@@ -1,0 +1,107 @@
+main{
+    .layout-result{
+        .ranked-panel{
+            &-matches{
+                @media (max-width:475px){
+                    padding: 10px 0;
+                }
+                .league-title{
+                    display: grid;
+                    grid-template-columns: 260px 1fr 80px 80px;
+                    font-size: 13px;
+                    font-weight: 700;
+                    @media (max-width:1000px){
+                        grid-template-columns: 1fr;
+                        .match-info,
+                        .match-result,
+                        .match-corner{
+                            display: none !important;
+                        }
+
+                    }
+                    .match-info{
+                        gap:30px;
+                    }
+                    .match-corner{
+                        img{
+                            max-width: 12px;
+                            margin-right: 0px;
+                        }
+                    }
+                }
+                .match-item-box{
+                    display: grid;
+                    grid-template-columns: 260px 1fr 80px 80px;
+                    padding: 10px 15px;
+                    @media (max-width:1000px){
+                        grid-template-columns:1fr;
+                    }
+                    @media (max-width:475px){
+                        padding: 10px 0;
+                    }
+                    &:hover{
+                        .match-item-box-time-hour,
+                        .match-item-box-time-vong,
+                        .match-corner-score{
+                            color:$primary4;
+                        }
+                    }
+                    @media (max-width:1000px){
+                        .match-item-box-wrapper{
+                            color: #AFB4BA;
+                            font-size: 13px;
+                            .match-item-box-time{
+                                width: auto !important;
+                            }
+                        }
+                    }
+                    .match-teams-result{
+                        .match-item-box-teams{
+                            &-status{
+                                margin: 0 20px !important;
+                            }
+                        }
+                    }
+                    .match-item-box-result-mobile{
+                        display: none;
+                        @media (max-width:1000px){
+                            display: inline-flex;
+                            gap: 1em;
+                            &-ht{
+                                color: #47A147;
+                                font-weight: bold;
+                                span{
+                                    font-weight: normal;
+                                    color: #AFB4BA;
+                                }
+                            }
+                        }
+                    }
+                    .match-competition-result{
+                        margin-left: 25px;
+                        @media (max-width:1000px){
+                            display: none !important;
+                        }
+                        &-inner{
+                            &-score{
+                                font-size: 13px;
+                                margin: 0px;
+                            }
+                        }
+                    }
+                    .match-corner{
+                        @media (max-width:1000px){
+                            display: none !important;
+                        }
+                        &-score{
+                            margin-left: 20px;
+                            font-size: 13px;
+                            margin: 0 0 0 20px;
+                            padding: 6px 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
